@@ -1,6 +1,6 @@
 const { readdirSync } = require( "fs") ;
 
-module.exports = client => {
+module.exports = async client => {
 
     let count = 0;
     const dirsEvents = readdirSync("./events/");

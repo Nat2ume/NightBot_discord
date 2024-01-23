@@ -7,9 +7,9 @@ module.exports = {
     .setDescription("Get the bot latency")
     .setDMPermission(true),
 
-    run(interaction) {
+    async run(interaction) {
 
-        interaction.reply(`Ping: \`${interaction.client.ws.ping} ms\`.`);
+        await interaction.reply(`Ping: \`${interaction.client.ws.ping} ms\`.`);
 
     }
 };
