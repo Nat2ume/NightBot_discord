@@ -7,7 +7,7 @@ const PREFIX2 = "@"
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,  // Nous autorise a acceder aux messages
+        GatewayIntentBits.GuildMessages,  // Nous autorise à acceder aux messages
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessageReactions,
     ],
@@ -23,7 +23,7 @@ client.on("ready", () => {
     console.log("Bot connecté")
     client.user.setPresence({
         activities : [{
-            name: "Hogwarts Legacy"
+            name: "?aide"
         }],
         status: "dnd"
     })
@@ -37,7 +37,7 @@ client.on("messageCreate", (message) => {
 
         switch(command){
             case "aide":
-                message.channel.send("Voici la  documentation du bot :\n\t Commandes : \n\t\t ?juif : Donne une explication sur les juifs\n");
+                message.reply("```Voici la  documentation du bot :\n\t Commandes : \n\t\t ```");
                 break
             default:
                 message.reply("Cette commande n'existe pas")
@@ -49,7 +49,7 @@ client.on("messageCreate", (message) => {
 
         switch(command){
             case "Gamers":
-                message.channel.send("J'arrive !!");
+                message.reply("J'arrive !!");
                 break
         }
     }
