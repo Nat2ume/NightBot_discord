@@ -1,6 +1,7 @@
 const TOKEN = ""
 const { Client, Partials, GatewayIntentBits} = require("discord.js")
 const PREFIX = "?"
+const PREFIX2 = "@"
 
 // On crée une instance du clien
 const client = new Client({
@@ -38,11 +39,18 @@ client.on("messageCreate", (message) => {
             case "aide":
                 message.channel.send("Voici la  documentation du bot :\n\t Commandes : \n\t\t ?juif : Donne une explication sur les juifs\n");
                 break
-            case "juif":
-                message.channel.send("Qu'ils aillent tous ce faire fumer !!");
-                break
             default:
                 message.reply("Cette commande n'existe pas")
+        }
+    }
+    if(message.content.startsWith(PREFIX2)){
+        const input = message.content.slice(PREFIX2.length).trim().split(" ");
+        const command = input.shift();
+
+        switch(command){
+            case "Gamers":
+                message.channel.send("J'arrive !!");
+                break
         }
     }
 });
