@@ -1,17 +1,15 @@
 {
-  "dependencies": {
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.2",
-    "ds": "^2.0.2",
-    "fs": "^0.0.1-security"
-  },
-  "name": "nightbot_discord",
-  "description": "",
+  "name": "botdiscord",
   "version": "1.0.0",
-  "main": "main.js",
+  "description": "Night Wolf team bot discord",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Nathaël BENOIT",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "nodemon": "^3.1.7"
+  }
 }
